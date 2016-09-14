@@ -1,0 +1,31 @@
+version: '2'
+services:
+  ember: &defaults
+    image: tomasbasham/ember:2.5.1
+    volumes:
+      - .:/usr/src/app
+
+  npm:
+    <<: *defaults
+    entrypoint: ['/usr/local/bin/npm']
+
+  bower:
+    <<: *defaults
+    entrypoint: ['/usr/local/bin/bower', '--allow-root']
+
+  server:
+    <<: *defaults
+    command: server --watcher polling
+    ports:
+      - "4200:4200"
+      - "35729:35729"
+
+  travis:
+    image: tomasbasham/travis:1.8.8
+    volumes:
+      - travis-data:/root/.travis
+      - .:/usr/src/app
+
+volumes:
+  travis-data:
+    external: true

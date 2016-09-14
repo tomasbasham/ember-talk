@@ -25,7 +25,10 @@ module.exports = function(environment) {
     },
 
     contentSecurityPolicy: {
-      'connect-src': "'self' http://*.pubnub.com"
+      'connect-src': "'self' http://*.pubnub.com",
+      'img-src': "'self' data:",
+      'media-src': "'self' blob:"
+
     }
   };
 

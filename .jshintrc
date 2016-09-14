@@ -1,6 +1,8 @@
 {
   "predef": [
+    "attachMediaStream",
     "document",
+    "negotiator",
     "window",
     "-Promise"
   ],

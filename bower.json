@@ -6,8 +6,10 @@
     "ember": "~2.7.0",
     "ember-cli-shims": "0.1.1",
     "ember-qunit-notifications": "0.1.0",
+    "font-awesome": "~4.4.0",
     "gingerbread": "~0.0.1",
     "neat": "~1.7.2",
+    "negotiator": "~0.0.2",
     "pubnub": "~3.7.15",
     "tweenjs": "~16.3.1"
   }

@@ -1,0 +1,10 @@
+{{!-- Presence --}}
+{{#gingerbread-container tagName='section' class='sidebar'}}
+  {{gingerbread-list items=users itemSelected='userSelected' title='Users' emptyMessage='No Users'}}
+{{/gingerbread-container}}
+
+{{!-- Main content --}}
+{{#gingerbread-container tagName='section' class='content'}}
+  {{yammer-toggle toggleSelected=(action 'toggleSidebar')}}
+  {{yammer-session phone=phone}}
+{{/gingerbread-container}}

@@ -7,6 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.modal('username-form', { queryParams: ['username'], action: 'usernameChanged' });
 });
 
 export default Router;

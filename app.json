@@ -1,0 +1,27 @@
+{
+  "name": "yammer",
+  "description": "An ember-cli WebRTC chat room using negotiator.",
+  "keywords": [
+    "ember-cli",
+    "negotiator",
+    "pubnub",
+    "webrtc"
+  ],
+  "website": "https://yammer.tomasbasham.co.uk",
+  "repository": "https://github.com/tomasbasham/yammer",
+  "logo": "https://cdn.tomasbasham.co.uk/yammer.svg",
+  "success_url": "/",
+  "buildpacks": [{
+    "url": "https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/emberjs.tgz"
+  }],
+  "env": {
+    "PUBNUB_PUBLISH_KEY": {
+      "description": "API key to publish messages to channels",
+      "value": ""
+    },
+    "PUBNUB_SUBSCRIBE_KEY": {
+      "description": "API key to subscribe to messages on channels",
+      "value": ""
+    }
+  }
+}
