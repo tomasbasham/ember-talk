@@ -8,6 +8,7 @@
     "ember-qunit-notifications": "0.1.0",
     "gingerbread": "~0.0.1",
     "neat": "~1.7.2",
+    "pubnub": "~3.7.15",
     "tweenjs": "~16.3.1"
   }
 }

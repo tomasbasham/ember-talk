@@ -16,6 +16,16 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    pubnub: {
+      subscribe_key: process.env.PUBNUB_SUBSCRIBE_KEY,
+      publish_key: process.env.PUBNUB_PUBLISH_KEY,
+      ssl: true
+    },
+
+    contentSecurityPolicy: {
+      'connect-src': "'self' http://*.pubnub.com"
     }
   };
 
