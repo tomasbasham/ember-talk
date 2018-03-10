@@ -8,6 +8,7 @@ exclude:
   - vendor
 
 plugins:
+  - jekyll-seo-tag
   - jekyll-sitemap
   - jemoji
 
@@ -20,3 +21,7 @@ url: https://ember-talk.com
 # Build settings
 markdown: kramdown
 highlighter: rouge
+
+# Analytics settings
+analytics:
+  google_tracking_id: UA-115455323-1
