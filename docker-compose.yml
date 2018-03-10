@@ -1,0 +1,18 @@
+version: "3"
+services:
+  ruby: &defaults
+    build: .
+    volumes:
+      - .:/usr/src/app
+
+  jekyll:
+    <<: *defaults
+    command: ["jekyll", "serve", "-H", "0.0.0.0"]
+    environment:
+      - JEKYLL_GITHUB_TOKEN
+    ports:
+      - "4000:4000"
+
+  test:
+    <<: *defaults
+    command: ["htmlproofer", "./",_"site", "--check-favicon", "--check-html", "--disable-external"]
